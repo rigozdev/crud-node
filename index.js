@@ -60,7 +60,7 @@ app.delete("/canciones/:id", async (req, res) => {
 
     const canciones = JSON.parse(await readFile("repertorio.json"));
     console.log(canciones);
-    const filtroCanciones = canciones.filter((cancion) => cancion.id !== parseInt(id));
+    const filtroCanciones = canciones.filter((cancion) => cancion.id !== id);
 
     console.log("caciones filtradas");
     console.log(filtroCanciones);
